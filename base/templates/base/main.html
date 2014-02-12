@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% from "macros/form_macros.html" import render_field %}
+
+{% block content %}
+    <article class="b-article l-75-c">
+        <form action="." method="POST" enctype="multipart/form-data" class="common-form">
+            {{ reply_form.hidden_tag() }}
+            {{ render_field(reply_form.video, class_='input common-form__input') }}
+            <div class="common-form__field-wrapper_highlight"> 
+                <input type="submit" class="button common-form__submit"
+                value="Upload and convert">
+            </div>
+        </form>
+    </article>
+{% endblock %}

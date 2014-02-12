@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block page_title %}Ice2MP4{% endblock %}</title>
+    {% block css %}
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/reset.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/typo.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/forms.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/page.css') }}">
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+</head>
+
+<body>
+<div class="l-wrapper">
+        {% block messages %}
+            {% include "blocks/messages.html" %}
+        {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    <div class="l-footer-crosspiece"></div>
+</div>
+
+{% block footer %}
+{% endblock %}
+</body>
+</html>
